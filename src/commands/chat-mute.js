@@ -15,13 +15,13 @@ run: async (client, message, args) => {
 const embed = new MessageEmbed().setFooter(`${config.embed.footer}`)
 if (!message.member.roles.cache.some(r => [(settings.roles.staff.chatMuteHammer)].includes(r.id)) && !message.member.hasPermission("MUTE_MEMBERS") && !message.member.hasPermission("ADMINISTRATOR")){message.channel.send(embed.setDescription(`${settings.emojis.no} Bu komutu kullanmak için yeterli yetkiniz bulunmamakta.`).setColor(`${config.embed.color.red}`).setAuthor(message.member.displayName, message.author.avatarURL({dynamic: true}))).then(x => x.delete({ timeout: 5000 })); return }
 let jyros = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
-if (!jyros) return message.channel.send(embed.setDescription(`${settings.emojis.no} Lütfen susturulacak kişiyi etiketleyiniz. \`${config.PREFIX}mute @Jyros 1s/m/h/d <sebep>\``).setColor(`${config.embed.color.red}`).setAuthor(message.member.displayName, message.author.avatarURL({dynamic: true}))).then(x => x.delete({ timeout: 5000 }));
+if (!jyros) return message.channel.send(embed.setDescription(`${settings.emojis.no} Lütfen susturulacak kişiyi etiketleyiniz. \`${config.PREFIX}mute @Kişi 1s/m/h/d <sebep>\``).setColor(`${config.embed.color.red}`).setAuthor(message.member.displayName, message.author.avatarURL({dynamic: true}))).then(x => x.delete({ timeout: 5000 }));
 if (jyros.id === message.author.id) return message.channel.send(embed.setDescription(`${settings.emojis.no} Kendinizi susturamazsınız.`).setColor(`${config.embed.color.red}`)).then(x => x.delete({ timeout: 5000 }));
 if (jyros.id === message.author.id) return message.react(settings.emojis.no);
 let time = args[1].replace("s", " Saniye").replace("m", " Dakika").replace("h", " Saat").replace("d", " Gün")
 let reason = args.splice(2).join(" ")
-if (!time) return message.channel.send(embed.setDescription(`${settings.emojis.no} Geçerli bir süre belirtiniz. \`${config.PREFIX}mute @Jyros 1s/m/h/d <sebep>\``).setColor(`${config.embed.color.red}`).setAuthor(message.member.displayName, message.author.avatarURL({dynamic: true}))).then(x => x.delete({ timeout: 5000 }));
-if(!reason) return message.channel.send(embed.setDescription(`${settings.emojis.no} Geçerli bir sebep giriniz. \`${config.PREFIX}mute @Jyros 1s/m/h/d <sebep>\``).setColor(`${config.embed.color.red}`).setAuthor(message.member.displayName, message.author.avatarURL({dynamic: true}))).then(x => x.delete({ timeout: 5000 }));
+if (!time) return message.channel.send(embed.setDescription(`${settings.emojis.no} Geçerli bir süre belirtiniz. \`${config.PREFIX}mute @Kişi 1s/m/h/d <sebep>\``).setColor(`${config.embed.color.red}`).setAuthor(message.member.displayName, message.author.avatarURL({dynamic: true}))).then(x => x.delete({ timeout: 5000 }));
+if(!reason) return message.channel.send(embed.setDescription(`${settings.emojis.no} Geçerli bir sebep giriniz. \`${config.PREFIX}mute @Kişi 1s/m/h/d <sebep>\``).setColor(`${config.embed.color.red}`).setAuthor(message.member.displayName, message.author.avatarURL({dynamic: true}))).then(x => x.delete({ timeout: 5000 }));
 jyros.roles.add(settings.roles.chatMuted)
 let cezaID = db.get(`cezaid.${message.guild.id}`) + 1
 let puan = await kdb.fetch(`cezapuan.${jyros.id}`) || "0"
