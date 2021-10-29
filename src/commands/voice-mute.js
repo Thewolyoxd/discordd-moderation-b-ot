@@ -20,8 +20,8 @@ if (jyros.id === message.author.id) return message.channel.send(embed.setDescrip
 if (jyros.id === message.author.id) return message.react(settings.emojis.no);
 let time = args[1].replace("s", " Saniye").replace("m", " Dakika").replace("h", " Saat").replace("d", " Gün")
 let reason = args.splice(2).join(" ")
-if (!time) return message.channel.send(embed.setDescription(`${settings.emojis.no} Geçerli bir süre belirtiniz. \`${config.PREFIX}vmute @Jyros 1s/m/h/d <sebep>\``).setColor(`${config.embed.color.red}`).setAuthor(message.member.displayName, message.author.avatarURL({dynamic: true}))).then(x => x.delete({ timeout: 5000 }));
-if(!reason) return message.channel.send(embed.setDescription(`${settings.emojis.no} Geçerli bir sebep giriniz. \`${config.PREFIX}vmute @Jyros 1s/m/h/d <sebep>\``).setColor(`${config.embed.color.red}`).setAuthor(message.member.displayName, message.author.avatarURL({dynamic: true}))).then(x => x.delete({ timeout: 5000 }));
+if (!time) return message.channel.send(embed.setDescription(`${settings.emojis.no} Geçerli bir süre belirtiniz. \`${config.PREFIX}vmute @Kişi 1s/m/h/d <sebep>\``).setColor(`${config.embed.color.red}`).setAuthor(message.member.displayName, message.author.avatarURL({dynamic: true}))).then(x => x.delete({ timeout: 5000 }));
+if(!reason) return message.channel.send(embed.setDescription(`${settings.emojis.no} Geçerli bir sebep giriniz. \`${config.PREFIX}vmute @Kişi 1s/m/h/d <sebep>\``).setColor(`${config.embed.color.red}`).setAuthor(message.member.displayName, message.author.avatarURL({dynamic: true}))).then(x => x.delete({ timeout: 5000 }));
 if (jyros.id === client.user.id) { message.channel.send(embed.setDescription(`${settings.emojis.no} Bir botu susturamazsınız!`).setAuthor(message.member.displayName, message.author.avatarURL({dynamic: true}))).then(x => x.delete({ timeout: 5000 }));
 message.react(settings.emojis.no)};
 if (jyros.roles.highest.position >= message.member.roles.highest.position) {
