@@ -33,8 +33,7 @@ Sesli kanallarda toplam \`${ses}\` üye bulunmakta.
 
 Teyit kategorisinde **${teyit}** üye bulunmakta.
 Public kategorisinde **${pub}** üye bulunmakta.
-Priv kategorisinde **${priv}** üye bulunmakta.
-Alone kategorisinde **${alone}** üye bulunmakta.
+Secret kategorisinde **${priv}** üye bulunmakta.
 `)).then(m => m.delete({ timeout: 15000 }))
 message.react(settings.emojis.yes)}
 if (!args[0]) {
