@@ -1,64 +1,64 @@
 {
 "tag":{
 
-"tag":"",
-"unTag":"⦁"
+"tag":"✩",
+"unTag":"✩"
 },
     
 "roles":{
-"owner":"",
-"booster":"",
-"taggesrole":"",
-"erkek":"",
-"kız":"",
-"kayıtsız":"",
-"chatMuted":"",
-"voiceMuted":"",
-"jail":"",
+"owner":"902858202574639136",
+"booster":"902956495438749746",
+"taggesrole":"902956496139223060",
+"erkek":"902957663342710824",
+"kız":"902957661404926004",
+"kayıtsız":"902957664387080212",
+"chatMuted":"902963207126261821",
+"voiceMuted":"902963950784757861",
+"jail":"902961603362816011",
     
 "staff":{
-"botCommands":"",
-"roleManager":"",
-"banHammer":"",
-"chatMuteHammer":"",
-"voiceMuteHammer":"",
-"jailHammer":"",
-"register":""
+"botCommands":"902958498168602634",
+"roleManager":"903583870119731212",
+"banHammer":"902958487691223060",
+"chatMuteHammer":"902958497770115073",
+"voiceMuteHammer":"902958497770115073",
+"jailHammer":"902958488366514256",
+"register":"902959178593734716"
 }
 },
     
 "channels":{
     
-"chat":"",
+"chat":"902939502346125322",
 
 "logs":{
 
-"boosterNickLog":"",
-"banLog":"",
-"chatMuteLog":"",
-"voiceMuteLog":"",
-"jailLog":"",
-"voiceLog":"",
-"roleLog":"",
-"nickNameLog":"",
-"cezaPuanLog":"",
-"joinLeaveLog":"",
-"streamLog":"",
-"şikayetler":""
+"boosterNickLog":"903584262949859328",
+"banLog":"902965885235515393",
+"chatMuteLog":"902965925010083989",
+"voiceMuteLog":"902965947659345940",
+"jailLog":"902965983059279912",
+"voiceLog":"902966254556549130",
+"roleLog":"903294723131834448",
+"nickNameLog":"903584262949859328",
+"cezaPuanLog":"903584520673062942",
+"joinLeaveLog":"902966009089105940",
+"streamLog":"903584712247885834",
+"şikayetler":"903584800240177163"
 },
     
 "categories":{
 
-"registry":"",
-"public":"",
-"secret":"",
-"alone":""
+"registry":"902936184135757825",
+"public":"902959977277304853",
+"secret":"902939730398806056",
+"alone":"902961276274225202"
 }
 },
     
 "emojis":{
     
-"yes":"",
-"no":""
+"yes":"❌",
+"no":"✅"
 }
 }
