@@ -7,7 +7,7 @@ if (message.author.bot) return;
 if (selamlar.some(s => message.content.toLowerCase() === s)) {
 message.channel.send(`${message.author}, Aleyküm selam hoş geldin.`)}
 let cezapuan = await kdb.fetch(`cezapuan.${message.author.id}`) || "0"
-if([".cezapuan","cezapuan","ceza-puan"].includes(message.content.toLowerCase())){ 
+if(["!cezapuan","cezapuan","ceza-puan"].includes(message.content.toLowerCase())){ 
 return message.channel.send(`${message.author}, toplam ceza puanınız: ${cezapuan}`)}}
 };
 module.exports.conf = {
