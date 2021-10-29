@@ -15,12 +15,12 @@ run: async (client, message, args) => {
 const embed = new MessageEmbed().setFooter(`${config.embed.footer}`)
 if (!message.member.roles.cache.some(r => [(settings.roles.staff.jailHammer)].includes(r.id)) && !message.member.hasPermission("ADMINISTRATOR")){message.channel.send(embed.setDescription(`${settings.emojis.no} Bu komutu kullanmak için yeterli yetkiniz bulunmamakta.`).setColor(`${config.embed.color.red}`)).then(x => x.delete({ timeout: 5000 })); return }
 let jyros = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
-if (!jyros) return message.channel.send(embed.setDescription(`${settings.emojis.no} Geçerli bir üye belirtiniz. \`${config.PREFIX}jail @Jyros 1s/m/h/d <sebep>\``).setColor(`${config.embed.color.red}`)).then(x => x.delete({ timeout: 5000 }));
+if (!jyros) return message.channel.send(embed.setDescription(`${settings.emojis.no} Geçerli bir üye belirtiniz. \`${config.PREFIX}jail @Kişi 1s/m/h/d <sebep>\``).setColor(`${config.embed.color.red}`)).then(x => x.delete({ timeout: 5000 }));
 const time = args[1].replace("s", " Saniye").replace("m", " Dakika").replace("h", " Saat").replace("d", " Gün")
 const reason = args.slice(2).join(' ')
-if(!time) { message.channel.send(embed.setDescription(`${settings.emojis.no} Geçerli bir süre giriniz. \`${config.PREFIX}jail @Jyros 1s/m/h/d <sebep>\``).setColor(`${config.embed.color.red}`)).then(x => x.delete({ timeout: 5000 }))
+if(!time) { message.channel.send(embed.setDescription(`${settings.emojis.no} Geçerli bir süre giriniz. \`${config.PREFIX}jail @Kişi 1s/m/h/d <sebep>\``).setColor(`${config.embed.color.red}`)).then(x => x.delete({ timeout: 5000 }))
 message.react(settings.emojis.no)};
-if (!reason) { message.channel.send(embed.setDescription(`${settings.emojis.no} Geçerli bir sebep giriniz. \`${config.PREFIX}jail @Jyros 1s/m/h/d <Sebep>\``).setColor(`${config.embed.color.red}`)).then(x => x.delete({ timeout: 5000 }))
+if (!reason) { message.channel.send(embed.setDescription(`${settings.emojis.no} Geçerli bir sebep giriniz. \`${config.PREFIX}jail @Kişi 1s/m/h/d <Sebep>\``).setColor(`${config.embed.color.red}`)).then(x => x.delete({ timeout: 5000 }))
 message.react(settings.emojis.no)};
 jyros.roles.add(settings.roles.jail);
 jyros.roles.cache.forEach(r => {
