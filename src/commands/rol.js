@@ -12,9 +12,9 @@ let jyros = message.mentions.users.first() || message.guild.members.cache.get(ar
 let user = message.guild.member(jyros);
 let rol = message.mentions.roles.first() || message.guild.roles.cache.get(args[2]) || message.guild.roles.cache.find(a => a.name == args.slice(2).join(' '));
 if (!message.member.roles.cache.some(r => [(settings.roles.staff.roleManager)].includes(r.id)) && !message.member.hasPermission("ADMINISTRATOR")){message.channel.send(embed.setDescription(`${settings.emojis.no} Bu komutu kullanmak için yeterli yetkiniz bulunmamakta.`)).then(m => m.delete({ timeout: 7000 })); return; }
-if(args[0] !== "ver" && args[0] !== "al") return message.channel.send(embed.setDescription(`Hata: Bir üyeye rol verip almak için lütfen __argümanları__ doldurun Örn: \`${config.PREFIX}rol ver/al @Jyros/ID <EtiketRol/RolID>\``)).then(x => x.delete({timeout: 5000}));
-if (!jyros){message.channel.send(embed.setDescription(`${message.author}, Hatalı Kullanım! \`${config.PREFIX}rol ver/al @Jyros/ID <EtiketRol/RolID>\``)).then(x => x.delete({timeout: 5000}));}
-if (!rol){message.channel.send(embed.setDescription(`${message.author}, Hatalı Kullanım! \`${config.PREFIX}rol ver/al @Jyros/ID <EtiketRol/RolID>\``)).then(x => x.delete({timeout: 5000}));}
+if(args[0] !== "ver" && args[0] !== "al") return message.channel.send(embed.setDescription(`Hata: Bir üyeye rol verip almak için lütfen __argümanları__ doldurun Örn: \`${config.PREFIX}rol ver/al @Kişi/ID <EtiketRol/RolID>\``)).then(x => x.delete({timeout: 5000}));
+if (!jyros){message.channel.send(embed.setDescription(`${message.author}, Hatalı Kullanım! \`${config.PREFIX}rol ver/al @Kişi/ID <EtiketRol/RolID>\``)).then(x => x.delete({timeout: 5000}));}
+if (!rol){message.channel.send(embed.setDescription(`${message.author}, Hatalı Kullanım! \`${config.PREFIX}rol ver/al @Kişi/ID <EtiketRol/RolID>\``)).then(x => x.delete({timeout: 5000}));}
 if (message.member.roles.highest.comparePositionTo(rol) < 1) {
 return message.channel.send(`Hata: \`Vermek istediğiniz rol sizin rollerinizden üstün!\` hatası sebebiyle işlem yapılamadı!`).then(x => x.delete({timeout: 6000}))}
 if(args[0] === "ver") {
