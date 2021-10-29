@@ -1,14 +1,13 @@
 {
-"TOKEN":"",
-"PREFIX":["."],
-"BOT_OWNER":"325134650630471680",
-"GUILD_OWNERS":[""],
+"PREFIX":["!"],
+"BOT_OWNER":"810161653756198933",
+"GUILD_OWNERS":["810161653756198933"],
 
-"guildID":"",
-"guildLink":"https://discord.gg/jyros",
+"guildID":"902629145371115522",
+"guildLink":"https://discord.gg/cCb5bkfUcC",
 
 "embed": {
-"footer":"Developed by Jyros",
+"footer":"Shinora ❤ Wolyo",
     
 "color":{
 "red":"#ff0000",
@@ -17,12 +16,12 @@
 }},
     
 "BOT":{
-"VOICECHANNEL":"",
+"VOICECHANNEL":"902937215976484864",
     
 "ACTIVITY":{
     
-"TYPE":"WATCHING",
-"NAME":["Developed by Jyros","Jyros 💜 Yalnızlık","Yalnızlık 💜 Jyros","birden_fazla_yapın_bu_kısmı_botun_durumudur"],
-"STATUS":"online"
+"TYPE":"PLAYING",
+"NAME":["Shinora ❤ Wolyo"],
+"STATUS":"dnd"
 }}
 }
