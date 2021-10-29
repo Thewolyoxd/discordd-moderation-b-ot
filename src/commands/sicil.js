@@ -26,7 +26,7 @@ message.react(settings.emojis.yes)}
 if (!args[0]) {
 if (!x) return message.channel.send(embed.setDescription(`
 ${user} Kullanıcısının sicil geçmişi temiz.
-`).setFooter(`Daha fazlası için: ${config.PREFIX}profil @Jyros`)).then(m => m.delete({ timeout: 7000 }))
+`).setFooter(`Daha fazlası için: ${config.PREFIX}profil @Kişi`)).then(m => m.delete({ timeout: 7000 }))
 let sicil = x.map((data, index) => `**[${data.Tip|| "belirtilmemiş"}]** <@!${data.Yetkili|| "belirtilmemiş"}> tarafından cezalandırıldı. \`#${data.cezaID || "Bulunamadı"}\``)
 message.channel.send(embed.setDescription(`
 ${sicil.join("\n") || "Bu kullanıcının sicili temiz."}
